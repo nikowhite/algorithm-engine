@@ -1,24 +1,24 @@
 
 # 🧠 Algorithmic Problem Engine
 
-**Algorithmic Problem Engine** — это консольный движок для запуска и проверки решений по алгоритмическим задачам, подобный внутреннему ядру LeetCode или Codeforces. Он предназначен для автоматической оценки пользовательских решений на разных языках программирования (Python, Java, C++).
+**Algorithmic Problem Engine** is a command-line engine for running and evaluating algorithmic problem solutions, similar to the core of platforms like LeetCode or Codeforces. It is designed to automatically validate user-submitted code in multiple programming languages (Python, Java, C++).
 
-## 🚀 Возможности
+## 🚀 Features
 
-- 📦 Загрузка задач из JSON (описание, входные/выходные данные)
-- 🧪 Прогон решений по всем тест-кейсам
-- ⌛ Ограничения по времени и памяти (через sandbox)
-- 🧩 Поддержка нескольких языков (Python, Java, C++)
-- 🔧 Модульная архитектура и расширяемость
-- 🖥️ CLI-интерфейс
+- 📦 Load problems from JSON (description, input/output)
+- 🧪 Execute solutions against multiple test cases
+- ⌛ Enforce time and memory limits (via a sandbox)
+- 🧩 Multi-language support (Python, Java, C++)
+- 🔧 Modular and extensible architecture
+- 🖥️ Command-line interface
 
-## 📁 Пример структуры задачи
+## 📁 Example Problem Format
 
 ```json
 {
   "id": "sum",
-  "title": "Сумма двух чисел",
-  "description": "Найти сумму двух целых чисел.",
+  "title": "Sum of Two Integers",
+  "description": "Find the sum of two integers.",
   "test_cases": [
     {"input": "2 3", "output": "5"},
     {"input": "-1 4", "output": "3"}
@@ -28,42 +28,42 @@
 }
 ```
 
-## 📄 Пример Python-решения (`sum.py`)
+## 📄 Example Python Solution (`sum.py`)
 
 ```python
 a, b = map(int, input().split())
 print(a + b)
 ```
 
-## 🔧 Установка и запуск
+## 🔧 Installation & Usage
 
 ```bash
-# Клонировать репозиторий
+# Clone the repository
 git clone https://github.com/yourusername/algorithm-engine.git
 cd algorithm-engine
 
-# Запуск задачи
+# Run a problem
 python engine/engine.py --problem examples/sum.json --solution solutions/sum.py --lang python
 ```
 
-## 📚 Для кого этот проект
+## 👤 Who Is This For?
 
-Этот проект может быть полезен:
+This project can be useful for:
 
-- 👨‍🏫 Преподавателям — для автоматической проверки решений студентов
-- 👨‍💻 Разработчикам — как ядро для онлайн-платформы с задачами
-- 🧪 Авторам курсов — для валидации входных заданий
-- 💼 Фрилансерам — как демонстрация архитектурных и системных навыков
+- 👨‍🏫 Teachers — to automatically evaluate students’ code
+- 👨‍💻 Developers — as the backend core of an online coding platform
+- 🧪 Course creators — to validate and test assignments
+- 💼 Freelancers — to demonstrate clean system architecture and coding skills
 
-## 📌 Заметки
+## 📌 Notes
 
-- Решения должен писать сам пользователь (например, студент или участник курса)
-- Задачи можно добавлять вручную или загружать из внешних источников
-- Возможна интеграция с веб-интерфейсом
+- Users are responsible for writing their own solutions
+- Problems can be added manually or loaded from APIs or files
+- Can be integrated into a future web platform
 
 ## ✅ TODO
 
-- [ ] Добавить тесты (unit/integration)
-- [ ] Добавить Docker sandbox
-- [ ] Поддержка новых языков (Rust, Go)
-- [ ] Web-интерфейс (опционально)
+- [ ] Add unit and integration tests
+- [ ] Add Docker sandbox for strict resource control
+- [ ] Support additional languages (Rust, Go, etc.)
+- [ ] Add optional web interface
